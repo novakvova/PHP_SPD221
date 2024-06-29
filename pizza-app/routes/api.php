@@ -10,3 +10,5 @@ Route::get('/user', function (Request $request) {
 
 Route::get('/categories', [CategoryController::class, 'getList']);
 Route::post('/categories', [CategoryController::class, 'store']);
+Route::delete('/categories/{id}', [CategoryController::class, 'delete']);
+Route::post('/categories/{id}', [CategoryController::class, 'update']);
