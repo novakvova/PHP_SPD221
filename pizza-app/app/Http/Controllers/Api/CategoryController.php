@@ -43,7 +43,7 @@ class CategoryController extends Controller
         $item = Category::find($id);
         if($request->input("name")!="") {
             if($request->hasFile('image')) {
-                $this->delete($id);
+                $this->deleteImage($id);
                 $file = $request->file("image");
                 $item->image = $this->saveImage($file);
             }
